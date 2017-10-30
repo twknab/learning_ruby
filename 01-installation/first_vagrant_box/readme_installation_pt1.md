@@ -55,3 +55,14 @@ This /vagrant directory in your VM is automatically synced with the host machine
 vagrant@vagrant-ubuntu-trusty-64:~$ cd /vagrant
 vagrant@vagrant-ubuntu-trusty-64:~$ ls
 is_this_file_synced  Vagrantfile
+
+
+# Useful Vagrant Commands:
+- vagrant init: Initializes vagrant with a Vagrantfile
+- vagrant up: Starts the vagrant machine
+- vagrant up --provision: Starts the machine with the provision
+- vagrant ssh: Starts a ssh session
+- vagrant halt: Stops the machine
+- vagrant destroy: Stops and deletes the machine
+- vagrant box add: Adds a vagrant box image on your computer
+- vagrant box list: List of all the vagrant boxes on your computer
