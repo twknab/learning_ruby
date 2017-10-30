@@ -58,7 +58,7 @@ user2 = User.second
 last_user = User.last
 # retrieving the user with id = 2
 user = User.find(2)
-# retrieving the first user with the first name John
+# retrieving the FIRST USER ONLY with the first name John
 john = User.find_by(first_name: "John")
 # retrieving all the users with the first name John
 johns = User.where(first_name: "John")
