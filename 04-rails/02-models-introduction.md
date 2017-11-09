@@ -34,12 +34,15 @@ When you use the generator to create a model, it will also create a few files:
 2. The migration file, which we'll cover more in depth in a later section.
 3. As well as some test files which we will cover in the TDD chapter.
 
+Here's what you'll see:
+```
 invoke  active_record
 create    db/migrate/20170201002746_create_users.rb
 create    app/models/user.rb
 invoke    test_unit
 create      test/models/user_test.rb
 create      test/fixtures/users.yml
+```
 
 Migration files are a way for us to grow/change our database schema over time. Once a migration file is created, we need to migrate it to our database by running:
 

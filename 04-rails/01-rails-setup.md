@@ -36,7 +36,7 @@
 -`rails generate rails_footnotes:install`
 
 ## ** Side Note: If your rails is out of date, changing your gem to this ensures latest version:
-- `gem 'rails'`
+- `gem install 'rails'`
 
 ## Updating your Bundle:
 - Whenever done modifying your Gem file, be sure to update and install once more:

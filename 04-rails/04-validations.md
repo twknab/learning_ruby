@@ -11,6 +11,9 @@ class User < ActiveRecord::Base
 end
 ```
 
+**Important Note:**
+*If utilizing rails console, be sure to type `reload!` into console after updating any models, otherwise your new fields or validations will not be detected.*
+
 The above code will validate that the `first_name` attribute is present for any new record. We can validate multiple fields and multiple validations on the same line. It's important to note that validates is a method we are inheriting from ActiveRecord.
 
 The parameters that we are passing in should look very familiar, we are passing in a symbol (:first_name) and a hash for all of the options. Look back to the hashes and symbols tab in the fundamentals chapter if this looks really strange to you.
@@ -48,3 +51,23 @@ Here is a short list of other types of validations:
 - `:acceptance` - validate whether a checkbox was checked when a form was submitted (usually for 'terms and conditions')
 - also, get familiar with `:message` and `:on`
 Check out [Active Record Validations documentation](http://guides.rubyonrails.org/active_record_validations.html).
+
+## Viewing Errors
+
+You can view errors by examining the errors object. This object is attached to any object which doesn't pass validation. Let's say for example first name is required and I attempted the following:
+
+```Ruby
+my_new_user = User.new(last_name: "Poppins").save
+# This will return a rollback (won't be created)
+
+my_new_user.valid?
+# should return => false
+
+my_new_user.errors
+# Will return all errors
+
+my_new_user.errors.full_messages
+# Shows array of all error messages
+```
+
+[Learn more about Error handling with Active Record](http://guides.rubyonrails.org/active_record_validations.html#working-with-validation-errors)

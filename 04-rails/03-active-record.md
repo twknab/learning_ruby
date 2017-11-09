@@ -66,6 +66,9 @@ johns = User.where(first_name: "John")
 does = User.where(last_name: "Doe").select(:first_name, :last_name)
 ```
 
+Here's how you can order data sets by property, ascending or descending:
+http://guides.rubyonrails.org/active_record_querying.html#ordering
+
 ## Updating Data
 Once we have found a record from our database, we can also modify its attributes. Again, we have a couple of different ways to update records.
 
