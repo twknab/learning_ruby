@@ -37,16 +37,16 @@ migrate status
 ## Functions
 There are many functions that we can use in migrations. Here is a list of the most popular ones:
 
-- create_table(name, options)
-- drop_table(name)
-- rename_table(old_name, new_name)
-- add_column(table_name, column_name, type, options)
-- rename_column(table_name, column_name, new_column_name)
-- change_column(table_name, column_name, type, options)
-- remove_column(table_name, column_name)
-- add_index(table_name, column_name, index_type)
-- remove_index(table_name, column_name)
-- add_reference(table_name, referenced_model, index:true)
+- `create_table(name, options)`
+- `drop_table(name)`
+- `rename_table(old_name, new_name)`
+- `add_column(table_name, column_name, type, options)`
+- `rename_column(table_name, column_name, new_column_name)`
+- `change_column(table_name, column_name, type, options)`
+- `remove_column(table_name, column_name)`
+- `add_index(table_name, column_name, index_type)`
+- `remove_index(table_name, column_name)`
+- `add_reference(table_name, referenced_model, index:true)`
 
 ## Rollback Migrations
 So far, we only talked about turning migrations up. What about if we want to revert a migration? Well, Active Record provides the rollback feature. Let's say that we want the original schema without the email column. In the terminal. we can run
