@@ -1,5 +1,7 @@
 # Query Optimization
 
+In this project you'll learn how to use `seeds.rb` to create seeded database data.
+
 Before we start talking about query optimization, we need to create an application with some data so we can run queries. Often times, applications need to have some default data in the database. For example, a travel app would most likely need the major destinations in the world loaded into their database. So, how can we solve this problem? From what we know right now, this particular task does not sound too pleasant. After creating the models, we would have to go to the console and insert information into our tables manually. If that does not sound bad enough, what if someone else wanted to use the same schema? They would need to type in the same information in their console as well. Ugh, not a good solution as you can imagine. Well, as with most things, Active Record provides a solution.
 
 ## Seed Data
@@ -14,7 +16,7 @@ rake db:migrate
 
 Make sure that you have the belongs_to :team and has_many :players relationships set up in your Player and Team models respectively.
 
-Next, navigate to db/seeds.rb and paste the following code:
+Next, navigate to `db/seeds.rb` and paste the following code:
 
 ```Ruby
 # we require 'open-uri' to request the html files
@@ -123,9 +125,13 @@ players.each_with_index do |roster, index|
 end
 ```
 
+*Note:* Be sure to open `models/team.rb` and add the following `has_many` relationship:
+
+  `has_many :players`
+
 Now, you can run:
 
-`rake db:seed`
+  `rake db:seed`
 
 This command will run the code in the `db/seeds.rb` file. Now, you should have all the nba teams and their rosters in the database. Navigate to your rails console and run:
 
