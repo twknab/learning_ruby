@@ -16,6 +16,9 @@ class Message < ActiveRecord::Base
 end
 ```
 
+## MODIFYING Models after Creating them:
+This is too advanced for this section, but if needing this reference please see file `./07-migrations.md` which describes it.
+
 This means that a specific message `belongs_to` a particular user. Each row in our messages table will contain a foreign_key reference to a user.  Always use the singular term for references.
 
 ## HAS_ONE Relationship

@@ -29,6 +29,8 @@
 - Making querying in terminal much easier:
 - `gem 'hirb'`
 
+*Note:* To use Hirb, you must write `Hirb.enable` from within the `rails console`. You may also enable pagination via, `Hirb.enable :pager=>true`. Use `G` to navigate to the end of the list and `:q!` to return to console. Without enabling paging options to true, you'll have trouble with large query sets when trying to return to the console.
+
 - Gives more info for you with page errors (note how we specify a version number and a restriction):
 # `gem 'rails-footnotes', '>= 4.0.0', '<5'`
 
