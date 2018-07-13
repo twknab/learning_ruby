@@ -35,6 +35,7 @@ When you use the generator to create a model, it will also create a few files:
 3. As well as some test files which we will cover in the TDD chapter.
 
 Here's what you'll see:
+
 ```
 invoke  active_record
 create    db/migrate/20170201002746_create_users.rb
